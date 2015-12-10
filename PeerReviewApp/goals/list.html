@@ -7,7 +7,7 @@
                 <th>End Date</th>
             </tr>
             <tr repeat.for="goal of goals">
-                <td>${goal.name}</td>
+                <td><a route-href="route:goalDetails; params.bind:{id:goal.id}">${goal.name}</a></td>
                 <td>${goal.startDate}</td>
                 <td>${goal.endDate}</td>
             </tr>

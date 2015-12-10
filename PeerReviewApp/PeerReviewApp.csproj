@@ -59,6 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="giveFeedback\giveFeedback.html" />
+    <Content Include="giveFeedback\giveFeedback.js" />
+    <Content Include="goals\details.html" />
+    <Content Include="goals\details.js" />
     <Content Include="package.json" />
     <Content Include="jspm_packages\.dependencies.json" />
     <Content Include="jspm_packages\.loaderversions" />
@@ -1610,6 +1614,8 @@
     <Content Include="jspm_packages\system.js" />
     <Content Include="jspm_packages\system.src.js" />
     <Content Include="main.js" />
+    <Content Include="user\user.html" />
+    <Content Include="user\user.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1640,9 +1646,7 @@
     <TypeScriptCompile Include="jspm_packages\npm\aurelia-templating-resources%401.0.0-beta.1.0.2\aurelia-templating-resources.d.ts" />
     <TypeScriptCompile Include="jspm_packages\npm\aurelia-templating-router%401.0.0-beta.1.0.2\aurelia-templating-router.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="giveFeedback\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
