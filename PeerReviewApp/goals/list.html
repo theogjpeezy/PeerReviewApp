@@ -1,16 +1,6 @@
 ﻿<template>
     <div class="container">
-        <table class="table">
-            <tr>
-                <th>Name</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-            </tr>
-            <tr repeat.for="goal of goals">
-                <td><a route-href="route:goalDetails; params.bind:{id:goal.id}">${goal.name}</a></td>
-                <td>${goal.startDate}</td>
-                <td>${goal.endDate}</td>
-            </tr>
-        </table>
+        <a route-href="route:goalCreate">Create New Goal</a>
+
     </div>
 </template>

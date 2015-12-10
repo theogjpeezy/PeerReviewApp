@@ -61,8 +61,12 @@
   <ItemGroup>
     <Content Include="giveFeedback\giveFeedback.html" />
     <Content Include="giveFeedback\giveFeedback.js" />
+    <Content Include="goals\create.html" />
+    <Content Include="goals\create.js" />
     <Content Include="goals\details.html" />
     <Content Include="goals\details.js" />
+    <Content Include="goals\edit.html" />
+    <Content Include="goals\edit.js" />
     <Content Include="package.json" />
     <Content Include="jspm_packages\.dependencies.json" />
     <Content Include="jspm_packages\.loaderversions" />

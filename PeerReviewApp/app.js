@@ -3,11 +3,12 @@
         this.router = router;
 
         config.map([
-            { route: ["", "list"], moduleId: "goals/list", title: "Goal List", name:"list", nav: true },
+            { route: ["", "user"], moduleId: "user/details", title: "Alex de los Reyes", nav: true },
             { route: "giveFeedback", moduleId: "giveFeedback/giveFeedback", title: "Feedback", nav: true },
             { route: "user/:id", moduleId: "user/details" },
-            { route: "user", moduleId: "user/details", title: "User Settings", nav: true },
-            { route: "goalDetails/:id", moduleId:"goals/details", name:"goalDetails"}
+            { route: "goalDetails/:id", moduleId:"goals/details", name:"goalDetails"},
+            { route: "goalEdit/:id", moduleId:"goals/edit", name:"goalEdit"},
+            { route: "goalCreate", moduleId:"goals/create", name:"goalCreate"},
         ]);
     }
 }

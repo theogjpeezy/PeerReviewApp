@@ -10,6 +10,7 @@ export class Details {
     activate(params) {
         if (params.id == undefined)
             params.id = 1;
-        return this.userData.getById(params.id).then(user => this.user = user);
+        this.userData.getById(params.id).then(user => this.user = user);
+        var one = 1;
     }
 }
