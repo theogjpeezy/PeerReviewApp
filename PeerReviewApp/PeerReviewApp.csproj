@@ -1614,8 +1614,9 @@
     <Content Include="jspm_packages\system.js" />
     <Content Include="jspm_packages\system.src.js" />
     <Content Include="main.js" />
-    <Content Include="user\user.html" />
-    <Content Include="user\user.js" />
+    <Content Include="user\details.html" />
+    <Content Include="user\details.js" />
+    <Content Include="user\userData.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

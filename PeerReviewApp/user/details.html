@@ -1,0 +1,15 @@
+﻿<template>
+    <div class="container">
+        <h3>${user.FirstName} ${user.LastName}</h3>
+        <div>Email: ${user.Email}</div>
+        <div>Manager: ${user.Manager}</div>
+        <div>Team Members:</div>
+        <div repeat.for="teammember of teammembers">
+            <a route-href="route:user; params.bind:{id:teammember.id}">${teammember.FirstName} ${teammember.LastName}</a>
+        </div>
+        <div>Goals:</div>
+        <div repeat.for="goal of goals">
+            <a route-href="route:goalDetails; params.bind:{id:goal.id}">${goal.name}</a>
+        </div>
+    </div>
+</template>
