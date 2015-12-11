@@ -9,20 +9,18 @@ export class GiveAttaboyOrGoof{
 		this.router = router;
 	}
     
+    activate(params) {
+        this.userId = params.id;
+    }
+
 	save() {
-		if(this.attaboyOrGoof.attaboy = true){
-			this.attaboyOrGoofData.createAttaboy(this.attaboyOrGoof).then(attaboyOrGoof =>
-			{
-				let url = this.router.generate("attaboy", { id: user.Id });
-				this.router.navigate(url);
-		});
-	} else
-		{
-			this.attaboyOrGoofData.createGoof(this.attaboyOrGoof).then(attaboyOrGoof =>
-			{
-				let url = this.router.generate("goof", { id: user.Id });
-	this.router.navigate(url);
-});
-		}
-}
+	    this.attaboyOrGoof.DateTimeSubmitted = new Date();
+	    this.attaboyOrGoof.SubmitterId = 1;
+	    this.attaboyOrGoof.UserId = this.userId;
+        
+		this.attaboyOrGoofData.createAttaboy(this.attaboyOrGoof).then(attaboyOrGoof => {
+		    let url = this.router.generate("home");
+            this.router.navigate(url);
+        });
+	}
 }

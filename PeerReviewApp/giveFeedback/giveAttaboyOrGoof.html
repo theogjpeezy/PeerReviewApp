@@ -2,29 +2,20 @@
 	<div class="container">
 		<div class="form-horizontal">
 			<div class="form-group">
-				<label class="col-sm-2">userId</label>
-				<div class="col-sm-10">
-					<input type="text" placeholder="userId" class="form-control" value.bind="attaboyOrGoof.userId" />
-				</div>
-			</div>
-			<div class="form-group">
 				<label class="col-sm-2">Comment</label>
 				<div class="col-sm-10">
 					<textarea placeholder="Comment you'd like to leave for the user." class="form-control" rows="3" value.bind="attaboyOrGoof.Comment"></textarea>
 				</div>
 			</div>
 
-			<div class="form-group">
-				<label class="col-sm-2">Is the feedback negative or positive?</label>
-				<div class="col-sm-1">
-					<label class="col-sm-2">Positive</label>
-					<input align="left" type="radio" placeholder="Is this negative feedback or Positive?" class="form-control" checked.bind="attaboyOrGoof.attaboy" value="true" />
-					<label class="col-sm-2">Negative</label>
-					<input align="left" type="radio" placeholder="Is this negative feedback or Positive?" class="form-control" checked.bind="attaboyOrGoof.attaboy" value="false"/>
-				</div>
-			</div>
+            <div class="form-group">
+                <label class="col-sm-2">Anonymous Submission</label>
+                <div class="col-sm-1">
+                    <input type="checkbox" class="form-control" checked.bind="attaboyOrGoof.IsAnonymous"/>
+                </div>
+            </div>
 
-			<input type="submit" click.trigger="save()" value="Submit" />
+		    <input type="submit" click.trigger="save()" value="Submit" />
 		</div>
 	</div>
 </template>
