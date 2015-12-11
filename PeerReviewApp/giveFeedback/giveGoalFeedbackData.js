@@ -12,4 +12,8 @@ export class GiveGoalFeedbackData {
     create(feedback) {
         return this.http.post(baseUrl, feedback).then(response => response.content);
     }
+
+    getByUserId(id) {
+        return this.http.get(`${baseUrl}?userId=${id}`).then(response => response.content);
+    }
 }

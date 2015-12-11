@@ -14,6 +14,10 @@ export class AttaboyOrGoofData {
 		return this.http.get(`${baseUrl}/attaboy/${id}`).then(response => response.content);
 }
 
+    getByUserId(id) {
+        return this.http.get(`${baseUrl}?userId=${id}`).then(response => response.content);
+    }
+
 	get(id) {
 		return this.http.get(`${baseUrl}/goof/${id}`).then(response => response.content);
 }

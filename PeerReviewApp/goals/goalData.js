@@ -27,6 +27,6 @@ export class GoalData {
     }
 
     delete(id) {
-        return this.http.delete(baseUrl, id).then(response => response.content);
+        return this.http.delete(`${baseUrl}/${id}`).then(response => response.content);
     }
 }

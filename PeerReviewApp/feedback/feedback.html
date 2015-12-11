@@ -1,0 +1,36 @@
+﻿<template>
+    <div class="container">
+        <h2>Feedback - ${user.FirstName} ${user.LastName}</h2>
+
+        <h3>Goal Feedback</h3>
+        <div class="container" repeat.for="goal of goals">
+            <h4>${goal.Goal.Title}</h4>
+            <table class="table">
+                <tr>
+                    <td>Submitter</td>
+                    <td>Rating</td>
+                    <td>Comment</td>
+                </tr>
+                <tr repeat.for="feedback of goal.Feedback">
+                    <td>${feedback.ReviewerName}</td>
+                    <td>${feedback.Rating}</td>
+                    <td>${feedback.Comment}</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Attaboys!</h3>
+        <table class="table">
+            <tr>
+                <th>Submitter</th>
+                <th>Comment</th>
+            </tr>
+            <tr repeat.for="attaboy of attaboys">
+                <td>${attaboy.SubmitterId == null ? '' : attaboy.SubmitterName}</td>
+                <td>${attaboy.Comment}</td>
+            </tr>
+        </table>
+    </div>
+
+
+</template>

@@ -59,6 +59,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="feedback\feedback.html" />
+    <Content Include="feedback\feedback.js" />
+    <Content Include="feedback\feedbackData.js" />
     <Content Include="giveFeedback\attaboyOrGoofData.js" />
     <Content Include="giveFeedback\giveAttaboyOrGoof.html" />
     <Content Include="giveFeedback\giveAttaboyOrGoof.js" />
