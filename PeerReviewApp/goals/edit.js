@@ -12,7 +12,7 @@ export class Edit {
     }
 
     activate(params) {
-        this.goal = this.goalData.getById(params.id);
+        this.goalData.getById(params.id).then(goal => this.goal = goal);
     }
 
     save() {

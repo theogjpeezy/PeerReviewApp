@@ -11,6 +11,5 @@ export class Details {
         if (params.id == undefined)
             params.id = 1;
         this.userData.getById(params.id).then(user => this.user = user);
-        var one = 1;
     }
 }

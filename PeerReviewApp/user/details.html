@@ -3,24 +3,37 @@
         <h2>${user.FirstName} ${user.LastName}</h2>
         <div>Email: ${user.Email}</div>
         <div>Manager: ${user.ManagerName}</div>
-        <div>Team Members:</div>
-        <ul>
-            <li repeat.for="teammember of user.TeamMembers">
-                ${teammember}
-            </li>
-        </ul>
+        
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Goal Feedback</th>
+                <th>Attaboy Feedback</th>
+            </tr>
+            <tr repeat.for="teammember of user.TeamMembers">
+                <td>${teammember}</td>
+                <td><button class="btn btn-default">Give Goal Feedback</button></td>
+                <td><button class="btn btn-default">Give Attaboy Feedback</button></td>
+            </tr>
+        </table>
 
         <h2>Goals</h2>
+        <a route-href="route:goalCreate" class="btn btn-default">Create New Goal</a>
+        <br/>
         <table class="table">
             <tr>
                 <th>Name</th>
                 <th>Start Date</th>
                 <th>End Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <tr repeat.for="goal of user.Goals">
                 <td><a route-href="route:goalDetails; params.bind:{id:goal.Id}">${goal.Title}</a></td>
                 <td>${goal.BeginDateTime}</td>
                 <td>${goal.EndDateTime}</td>
+                <td><a class="btn btn-default" route-href="route:goalEdit; params.bind:{id:goal.Id}">Edit</a></td>
+                <td><a class="btn btn-default" href="#" >Delete</a></td>
             </tr>
         </table>
     </div>
