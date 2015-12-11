@@ -9,6 +9,7 @@
             { route: "goalDetails/:id", moduleId:"goals/details", name:"goalDetails"},
             { route: "goalEdit/:id", moduleId:"goals/edit", name:"goalEdit"},
             { route: "goalCreate", moduleId:"goals/create", name:"goalCreate"},
+			{ route: "attaboyOrGoofCreate", moduleId:"giveFeedback/giveAttaboyOrGoof", name:"attaboyOrGoofCreate"},
         ]);
     }
 }
