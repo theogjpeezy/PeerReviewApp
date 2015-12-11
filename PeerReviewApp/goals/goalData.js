@@ -19,6 +19,10 @@ export class GoalData {
     }
 
     update(goal) {
-        return this.http.put(baseUrl, goal);
+        return this.http.put(baseUrl, goal).then(response => response.content);
+    }
+
+    delete(id) {
+        return this.http.delete(baseUrl, id).then(response => response.content);
     }
 }

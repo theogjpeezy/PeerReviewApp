@@ -2,8 +2,7 @@
 import {GoalData} from "./goalData";
 import {Router} from "aurelia-router";
 
-@inject(GoalData)
-@inject(Router)
+@inject(GoalData, Router)
 export class Edit {
 
     constructor(goalData, router) {
