@@ -11,8 +11,8 @@
                 <th>Attaboy Feedback</th>
             </tr>
             <tr repeat.for="teammember of user.TeamMembers">
-                <td>${teammember}</td>
-                <td><button class="btn btn-default">Give Goal Feedback</button></td>
+                <td>${teammember.FirstName} ${teammember.LastName}</td>
+                <td><a route-href="route:userGoals; params.bind:{id:teammember.Id}" class="btn btn-default">Give Goal Feedback</a></td>
                 <td><button class="btn btn-default">Give Attaboy Feedback</button></td>
             </tr>
         </table>

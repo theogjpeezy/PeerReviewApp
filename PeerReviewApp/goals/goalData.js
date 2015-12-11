@@ -13,6 +13,10 @@ export class GoalData {
         return this.http.get(`${baseUrl}/${id}`).then(response => response.content);
     }
 
+    getUserGoals(id) {
+        return this.http.get(`${baseUrl}?userId=${id}`).then(response => response.content);
+    }
+
     create(goal) {
         goal.UserId = 1;
         return this.http.post(baseUrl, goal).then(response => response.content);

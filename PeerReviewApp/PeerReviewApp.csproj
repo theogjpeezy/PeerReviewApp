@@ -59,8 +59,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="giveFeedback\giveFeedback.html" />
-    <Content Include="giveFeedback\giveFeedback.js" />
+    <Content Include="giveFeedback\giveGoalFeedback.html" />
+    <Content Include="giveFeedback\giveGoalFeedback.js" />
+    <Content Include="giveFeedback\giveGoalFeedbackData.js" />
     <Content Include="goals\create.html" />
     <Content Include="goals\create.js" />
     <Content Include="goals\details.html" />
