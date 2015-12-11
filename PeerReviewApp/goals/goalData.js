@@ -7,23 +7,26 @@ let baseUrl = "http://127.0.0.1:1776/api/goal"
 export class GoalData {
     constructor (httpClient) {
         this.http = httpClient;
-        this.allGoals = [{"id":1, "Title":"Goal 1", "BeginDateTime": "2015-01-01", "EndDateTime":"2016-01-01", "IsActive":true, "Details":"testing"},
-                {"id": 2,"Title":"Goal 2", "BeginDateTime": "2015-01-01", "EndDateTime":"2016-01-01", "IsActive":false}];
-    }
-
-    getAll() {
-        return this.allGoals;
     }
 
     getById(id) {
-        return this.allGoals.filter(function(goal) { if (goal.id == id) return goal; })[0];
+        return this.http.get(`${baseUrl}/${id}`).then(response => response.content);
+    }
+
+    getUserGoals(id) {
+        return this.http.get(`${baseUrl}?userId=${id}`).then(response => response.content);
     }
 
     create(goal) {
-        return this.http.post(baseUrl, goal);
+        goal.UserId = 1;
+        return this.http.post(baseUrl, goal).then(response => response.content);
     }
 
     update(goal) {
-        return this.http.put(baseUrl, goal);
+        return this.http.put(baseUrl, goal).then(response => response.content);
+    }
+
+    delete(id) {
+        return this.http.delete(baseUrl, id).then(response => response.content);
     }
 }

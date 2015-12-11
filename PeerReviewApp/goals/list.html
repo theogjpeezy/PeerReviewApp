@@ -1,6 +1,19 @@
 ﻿<template>
     <div class="container">
-        <a route-href="route:goalCreate">Create New Goal</a>
-
+        <h2>Goals - ${user.FirstName} ${user.LastName}</h2>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Give Feedback</th>
+            </tr>
+            <tr repeat.for="goal of goals">
+                <td>${goal.Title}</td>
+                <td>${goal.BeginDateTime}</td>
+                <td>${goal.EndDateTime}</td>
+                <td><a class="btn btn-default" route-href="route:giveGoalFeedback; params.bind:{id:goal.Id}">Give Feedback</a></td>
+            </tr>
+        </table>
     </div>
 </template>

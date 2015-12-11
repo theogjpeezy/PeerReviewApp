@@ -2,8 +2,7 @@
 import {GoalData} from "./goalData";
 import {Router} from "aurelia-router";
 
-@inject(GoalData)
-@inject(Router)
+@inject(GoalData, Router)
 export class Edit {
 
     constructor(goalData, router) {
@@ -12,7 +11,7 @@ export class Edit {
     }
 
     activate(params) {
-        this.goal = this.goalData.getById(params.id);
+        this.goalData.getById(params.id).then(goal => this.goal = goal);
     }
 
     save() {
