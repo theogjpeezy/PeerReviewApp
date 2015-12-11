@@ -1,8 +1,14 @@
 ﻿<template>
     <div class="container">
         <h2>${user.FirstName} ${user.LastName}</h2>
-        <div>Email: ${user.Email}</div>
-        <div>Manager: ${user.ManagerName}</div>
+
+        <dl class="dl-horizontal">
+            <dt style="float: left!important; width: 50px">Email</dt>
+            <dd>${user.Email}</dd>
+
+            <dt style="float: left!important; width: 70px">Manager</dt>
+            <dd>${user.ManagerName}</dd>
+        </dl>
         
         <table class="table">
             <tr>
