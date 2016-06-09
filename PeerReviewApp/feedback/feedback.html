@@ -9,28 +9,14 @@
                 <tr>
                     <td>Submitter</td>
                     <td>Rating</td>
-                    <td>Comment</td>
+                    <td>Comments</td>
                 </tr>
                 <tr repeat.for="feedback of goal.Feedback">
                     <td>${feedback.ReviewerName}</td>
                     <td>${feedback.Rating}</td>
-                    <td>${feedback.Comment}</td>
+                    <td>${feedback.Comments}</td>
                 </tr>
             </table>
         </div>
-
-        <h3>Attaboys!</h3>
-        <table class="table">
-            <tr>
-                <th>Submitter</th>
-                <th>Comment</th>
-            </tr>
-            <tr repeat.for="attaboy of attaboys">
-                <td>${attaboy.SubmitterId == null ? '' : attaboy.SubmitterName}</td>
-                <td>${attaboy.Comment}</td>
-            </tr>
-        </table>
     </div>
-
-
 </template>

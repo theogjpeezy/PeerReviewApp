@@ -14,12 +14,10 @@
             <tr>
                 <th>Name</th>
                 <th>Goal Feedback</th>
-                <th>Attaboy Feedback</th>
             </tr>
             <tr repeat.for="teammember of user.TeamMembers">
                 <td>${teammember.FirstName} ${teammember.LastName}</td>
                 <td><a route-href="route:userGoals; params.bind:{id:teammember.Id}" class="btn btn-default">Give Goal Feedback</a></td>
-                <td><a route-href="route:attaboyOrGoofCreate; params.bind:{id:teammember.Id}" class="btn btn-default">Give an Attaboy</a></td>
             </tr>
         </table>
 

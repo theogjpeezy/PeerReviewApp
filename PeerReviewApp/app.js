@@ -10,7 +10,6 @@
             { route: "goalEdit/:id", moduleId:"goals/edit", name:"goalEdit"},
             { route: "goalCreate", moduleId:"goals/create", name:"goalCreate", title: "Create a Goal", nav: true},
             { route: "userGoals/:id", moduleId:"goals/list", name: "userGoals"},
-			{ route: "attaboyOrGoofCreate/:id", moduleId:"giveFeedback/giveAttaboyOrGoof", name:"attaboyOrGoofCreate"},
             { route: "userFeedback", moduleId:"feedback/feedback", title: "Feedback Report", nav: true},
         ]);
     }
