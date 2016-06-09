@@ -1,22 +1,26 @@
 ﻿<template>
     <div class="container">
-        <h2>Feedback - ${user.FirstName} ${user.LastName}</h2>
-
+        <h2>Feedback Report - ${user.FirstName} ${user.LastName}</h2>
         <h3>Goal Feedback</h3>
         <div class="container" repeat.for="goal of goals">
-            <h4>${goal.Goal.Title}</h4>
-            <table class="table">
-                <tr>
-                    <td>Submitter</td>
-                    <td>Rating</td>
-                    <td>Comments</td>
-                </tr>
-                <tr repeat.for="feedback of goal.Feedback">
-                    <td>${feedback.ReviewerName}</td>
-                    <td>${feedback.Rating}</td>
-                    <td>${feedback.Comments}</td>
-                </tr>
-            </table>
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>${goal.Goal.Title}</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-nonfluid">
+                        <tr repeat.for="feedback of goal.Feedback">
+                            <td>
+                                <P>${feedback.Comments}</P>
+                                <div class="col-md-2">${feedback.ReviewerName}</div>
+                                <div class="col-md-2">
+                                    <span class="glyphicon glyphicon-star" aria-hidden="true" repeat.for="count of feedback.Rating"> </span>
+                                </div>
+                                <div class="col-md-3">${feedback.DateTimeSubmitted}</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </template>
