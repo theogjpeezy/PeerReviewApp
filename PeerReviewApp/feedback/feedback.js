@@ -16,11 +16,11 @@ export class Feedback {
             params.id = 1;
         }
         this.userData.getById(params.id).then(user => this.user = user);
-        this.giveGoalFeedbackData.getByUserId(params.id).then(goals => this.goals = goals.filter(function(goal) {
+        return this.giveGoalFeedbackData.getByUserId(params.id).then(goals => this.goals = goals.filter(function(goal) {
             if (goal.Feedback.length > 0) {
                 return goal;
             }
         }));
-        return this.attaboyOrGoofData.getByUserId(params.id).then(attaboys => this.attaboys = attaboys);
+        
     }
 }

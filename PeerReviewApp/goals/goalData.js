@@ -1,7 +1,7 @@
 ﻿import {inject} from "aurelia-framework";
 import {HttpClient} from "aurelia-http-client";
 
-let baseUrl = "http://127.0.0.1:1776/api/goal"
+let baseUrl = "http://adlreyes-devlt:31337/api/goal"
 
 @inject(HttpClient)
 export class GoalData {

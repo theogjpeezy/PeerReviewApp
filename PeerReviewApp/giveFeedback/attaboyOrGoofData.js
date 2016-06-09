@@ -1,7 +1,7 @@
 ﻿import {inject} from "aurelia-framework";
 import {HttpClient} from "aurelia-http-client";
 
-let baseUrl = "http://127.0.0.1:1776/api/attaboy";
+let baseUrl = "http://adlreyes-devlt:31337/api/attaboy";
 
 @inject(HttpClient)
 export class AttaboyOrGoofData {
@@ -32,5 +32,4 @@ export class AttaboyOrGoofData {
 	createGoof(id) {
 		return this.http.post(baseUrl, id);
 	}
-
 }
